@@ -99,7 +99,7 @@ function serve() {
 
   watch(paths.assets.scss, styles);
   watch(paths.assets.js, scripts);
-  watch('src/images/**/*', images);
+  watch(paths.assets.images, images);
   watch(['src/pages/**/*.html', 'src/templates/**/*.html', 'src/partials/**/*.html'], html);
 }
 

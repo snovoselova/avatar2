@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+  @@include('../partials/head.html', {"title": "Оплата @@titleSuffix"})
+  <body>
+    @@include('../partials/header.html')
+
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <h1>Оплата</h1>
+          <p>Доступ к материалам откроется сразу после оплаты.</p>
+          <div class="paywall">
+            <div class="paywall__plan">
+              <h2>Старт</h2>
+              <p class="paywall__price">490 ₽</p>
+              <ul class="paywall__features">
+                <li>1 месяц доступа</li>
+                <li>Базовые материалы</li>
+              </ul>
+              <button class="btn">Оплатить</button>
+            </div>
+            <div class="paywall__plan paywall__plan--best">
+              <h2>Про</h2>
+              <p class="paywall__price">1290 ₽</p>
+              <ul class="paywall__features">
+                <li>3 месяца доступа</li>
+                <li>Все материалы + поддержка</li>
+              </ul>
+              <button class="btn">Оплатить</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('../partials/footer.html')
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

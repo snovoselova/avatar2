@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+  @@include('../partials/head.html', {"title": "Главная @@titleSuffix"})
+  <body>
+    @@include('../partials/header.html')
+
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <h1>Лендинг @@titleSuffix — Главная</h1>
+          <p>Пример мобильного слайдера и каркаса страниц.</p>
+        </div>
+      </section>
+
+      @@include('../partials/slider.html')
+
+      <section class="features">
+        <div class="container">
+          <h2>Преимущества</h2>
+          <ul class="features__list">
+            <li>Быстрая сборка через Gulp и BrowserSync</li>
+            <li>SCSS, минификация CSS/JS, оптимизация изображений</li>
+            <li>Шаблонизация с параметрами и поддержка нескольких лендингов</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    @@include('../partials/footer.html')
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

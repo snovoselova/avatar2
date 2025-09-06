@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+  @@include('../partials/head.html', {"title": "Регистрация @@titleSuffix"})
+  <body>
+    @@include('../partials/header.html')
+
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <h1>Регистрация</h1>
+          <form class="form form--auth" action="#" method="post">
+            <label class="form__field">
+              <span>Имя</span>
+              <input type="text" name="name" required />
+            </label>
+            <label class="form__field">
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label class="form__field">
+              <span>Пароль</span>
+              <input type="password" name="password" required minlength="6" />
+            </label>
+            <button class="btn" type="submit">Зарегистрироваться</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    @@include('../partials/footer.html')
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

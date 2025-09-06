@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Слайд 2">
+  <defs>
+    <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#g2)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <g opacity="0.95">
+    <rect x="120" y="90" width="220" height="320" rx="28" fill="#111827"/>
+    <rect x="138" y="120" width="184" height="12" rx="6" fill="#f3f4f6" opacity="0.85"/>
+    <rect x="138" y="150" width="164" height="12" rx="6" fill="#f3f4f6" opacity="0.6"/>
+    <rect x="138" y="180" width="172" height="140" rx="12" fill="#374151"/>
+    <rect x="138" y="332" width="184" height="16" rx="8" fill="#10b981"/>
+    <circle cx="230" cy="368" r="10" fill="#f59e0b"/>
+  </g>
+  <text x="460" y="360" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif" font-size="36" text-anchor="middle" fill="#111827" opacity="0.95">Mobile‑first дизайн</text>
+</svg>

@@ -30,6 +30,11 @@ npm install
   ```bash
   npm run clean
   ```
+  
+- Запуск линтера:
+  ```bash
+  npm run linter
+  ```
 
 ## Структура проекта
 ```

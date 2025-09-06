@@ -7,7 +7,6 @@ const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const terser = require('gulp-terser');
 const imagemin = require('gulp-imagemin');
 const merge = require('merge-stream');
 

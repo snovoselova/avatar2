@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay, Keyboard, A11y } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.js-swiper', {
+    new Swiper('.js-swiper', {
         modules: [Navigation, Pagination, Autoplay, Keyboard, A11y],
         loop: false,
         slidesPerView: 1,

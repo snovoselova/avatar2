@@ -37,7 +37,7 @@ npm install
   ```
 
 ## Структура проекта
-```
+```text
 project/
 ├─ gulpfile.js               # Задачи Gulp (styles, scripts, images, html, serve)
 ├─ landings.config.js        # Конфигурация 4 лендингов (id, картинка хедера, суффикс)

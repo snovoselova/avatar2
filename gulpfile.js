@@ -33,7 +33,7 @@ function styles() {
   const streams = landings.map(l => {
     return src('src/scss/main.scss', { allowEmpty: true })
       .pipe(gulpIf(!isProd, sourcemaps.init()))
-      .pipe(sass().on('error', sass.logError))
+      .pipe(sass({ includePaths: ['node_modules'] }).on('error', sass.logError))
       .pipe(autoprefixer({ cascade: false }))
       .pipe(gulpIf(isProd, cleanCSS({ level: 2 })))
       .pipe(gulpIf(!isProd, sourcemaps.write('.')))
@@ -44,9 +44,23 @@ function styles() {
 }
 
 function scripts() {
+  const webpack = require('webpack');
+  const webpackStream = require('webpack-stream');
   const streams = landings.map(l => {
-    return src('src/js/**/*.js', { allowEmpty: true })
-      .pipe(gulpIf(isProd, terser()))
+    return src('src/js/main.js', { allowEmpty: true })
+      .pipe(webpackStream({
+        mode: isProd ? 'production' : 'development',
+        entry: './src/js/main.js',
+        output: { filename: 'main.js' },
+        devtool: isProd ? false : 'source-map',
+        module: {
+          rules: [
+            // add loaders here if needed in future
+          ]
+        },
+        resolve: { extensions: ['.js'] },
+        target: 'web'
+      }, webpack))
       .pipe(dest(`${paths.dist}/${l.id}/assets/js`))
       .pipe(browserSync.stream());
   });

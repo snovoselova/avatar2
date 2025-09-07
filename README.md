@@ -10,7 +10,7 @@
 
 ## Установка
 ```bash
-npm install
+npm ci
 ```
 
 ## Скрипты

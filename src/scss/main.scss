@@ -1,3 +1,5 @@
+@import 'register';
+
 /* Mobile-first styles */
 :root {
   --bg: #0f172a;
@@ -22,13 +24,12 @@
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Moderustic', sans-serif;
   line-height: 1.5;
   color: var(--text);
-  background: radial-gradient(1200px 800px at 10% -10%, #1f2937, transparent 70%),
-              radial-gradient(900px 700px at 110% 10%, #0b132b, transparent 60%),
-              var(--bg);
+  background: #0A0A0A;
 }
+
 img { max-width: 100%; display: block; height: auto; }
 
 .container {
@@ -86,14 +87,6 @@ h2 { font-size: 22px; }
   border-radius: 10px;
   padding: 12px 14px;
 }
-.btn {
-  border: none; cursor: pointer; font-weight: 700;
-  background: linear-gradient(135deg, var(--primary), #7c3aed);
-  color: var(--primary-contrast);
-  padding: 12px 18px; border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(79,70,229,.35);
-}
-.btn:hover { filter: brightness(1.05); }
 
 .paywall {
   display: grid; gap: var(--space-4); grid-template-columns: 1fr; margin-top: var(--space-5);
@@ -132,9 +125,165 @@ h2 { font-size: 22px; }
 }
 .slider__dots button[aria-current="true"] { background: var(--accent); }
 
+/* Before/After Section */
+.before-after-section {
+  position: relative;
+  background-image: url('../images/tmp.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  min-height: 200px;
+  margin-bottom: var(--space-5);
+  overflow: hidden;
+}
+
+.before-after-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border-top-right-radius: 15px;
+  font-weight: 400;
+}
+
 @media (min-width: 768px) {
   h1 { font-size: 38px; }
   h2 { font-size: 28px; }
   .hero { padding: var(--space-7) 0 var(--space-6); }
   .paywall { grid-template-columns: repeat(2, 1fr); }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(180deg, #FFD98D 0%, #FFBB33 100%);
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #FFBB33;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+
+  .btn span {
+    font-size: 18px;
+  }
+}
+
+/* Reviews Slider */
+.reviews-slider {
+  border-radius: 12px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 4px; /* добавляем немного отступа для теней */
+  
+  /* Скрываем скроллбар */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+  
+  &::-webkit-scrollbar {
+    display: none;           /* Chrome, Safari and Opera */
+  }
+}
+
+.slide {
+  min-width: 280px;           /* фиксированная ширина для отзывов */
+  max-width: 320px;
+  background: #222;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.review {
+  padding: 16px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.review__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #333; /* фоновый цвет на случай отсутствия изображения */
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.review__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.review__name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.review__position {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+.upload-box {
+  background: #1a1a1a;
+  border: 2px dashed #f0a500;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive для слайдера отзывов */
+@media (min-width: 768px) {
+  .reviews-slider {
+    gap: 16px;
+  }
+  
+  .slide {
+    min-width: 300px;
+    max-width: 340px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide {
+    min-width: 320px;
+    max-width: 360px;
+  }
 }

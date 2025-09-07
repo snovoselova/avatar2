@@ -12,18 +12,120 @@
         </div>
       </section>
 
-      @@include('../partials/slider.html')
-
       <section class="features">
         <div class="container">
-          <h2>Преимущества</h2>
-          <ul class="features__list">
-            <li>Быстрая сборка через Gulp и BrowserSync</li>
-            <li>SCSS, минификация CSS/JS, оптимизация изображений</li>
-            <li>Шаблонизация с параметрами и поддержка нескольких лендингов</li>
-          </ul>
+          <section class="before-after-section">
+            <div class="before-after-badge">До/после</div>
+          </section>
+
+          <a href="#" class="btn">Пример кнопки</a>
+
+          <div class="upload-box">
+            <p>Загрузите фото (JPG, PNG до 10MB)</p>
+            <a href="#" class="btn">ЗАГРУЗИ ФОТОГРАФИЮ</a>
+          </div>
+
+          <div class="swiper js-swiper">
+            <div class="swiper-wrapper">
+              <div class="slide review swiper-slide">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Мгновенный результат! Очень доволен."</p>
+                <div class="review__author">
+                  <div class="review__avatar">
+                    <img src="assets/images/avatar-placeholder.jpg" alt="Артур">
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Артур</div>
+                    <div class="review__position">Frontend разработчик</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide review swiper-slide">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Отличное качество и быстрая работа. Рекомендую всем!"</p>
+                <div class="review__author">
+                  <div class="review__avatar">
+                    <img src="assets/images/avatar-placeholder.jpg" alt="Мария">
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Мария</div>
+                    <div class="review__position">UX/UI Designer</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide review swiper-slide">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Превзошло все мои ожидания. Профессиональный подход!"</p>
+                <div class="review__author">
+                  <div class="review__avatar">
+                    <img src="assets/images/avatar-placeholder.jpg" alt="Дмитрий">
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Дмитрий</div>
+                    <div class="review__position">Product Manager</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide review swiper-slide">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Простое решение сложных задач. Именно то, что нужно!"</p>
+                <div class="review__author">
+                  <div class="review__avatar">
+                    <img src="assets/images/avatar-placeholder.jpg" alt="Елена">
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Елена</div>
+                    <div class="review__position">Marketing Director</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide review swiper-slide">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Идеальное соотношение цены и качества. Буду заказывать ещё!"</p>
+                <div class="review__author">
+                  <div class="review__avatar">
+                    <img src="assets/images/avatar-placeholder.jpg" alt="Александр">
+                  </div>
+                  <div class="review__info">
+                    <div class="review__name">Александр</div>
+                    <div class="review__position">CEO</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <div class="tmp-reg-bg">
+        <section class="register">
+          <div class="container">
+            <div class="header">
+              <h1>Введите номер телефона</h1>
+            </div>
+
+            <div class="form-container">
+              <div class="phone-input">
+                <div class="phone-field">
+                  <div class="country-code">+7</div>
+                  <input type="tel" placeholder="(9XX) XXX-XX-XX" pattern="[0-9]{10}" maxlength="10" required>
+                </div>
+              </div>
+
+              <button class="btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+
+              <div class="agreement">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">Соглашаюсь с <a href="#">правилами лицензионного договора оферты</a> и <a href="#">правилами использования РФ</a>. <a href="#">Политика обработки персональных данных</a> мне понятна и я с ней согласен. Согласен на автоматическую оплату в размере <span class="highlight">одной тысячи пятисот рублей</span> каждые пять дней по истечению пробного периода в один день.</label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     @@include('../partials/footer.html')

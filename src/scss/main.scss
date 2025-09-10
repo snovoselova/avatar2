@@ -599,7 +599,25 @@ footer {
       }
     }
 
-    &.yellow {
+
+
+    &.yellow-one{
+      color: #000;
+      overflow: hidden;
+      background: #FFBB33 url('../images/paint.svg') no-repeat right top;
+      background-size: 130px;
+
+      .bg-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+
+    &.yellow-two{
       color: #000;
       overflow: hidden;
       background: #FFBB33 url('../images/stars.svg') no-repeat right top;

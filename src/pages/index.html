@@ -5,12 +5,6 @@
     @@include('../partials/header.html')
 
     <main class="main">
-      <section class="hero">
-        <div class="container">
-          <h1>Лендинг @@titleSuffix — Главная</h1>
-          <p>Пример мобильного слайдера и каркаса страниц.</p>
-        </div>
-      </section>
 
       <section class="features">
 
@@ -22,7 +16,7 @@
 
         <div class="container">
 
-          <a href="#" class="btn">
+          <a href="register.html" class="btn">
             ПОПРОБУЙ БЕСПЛАТНО
             <img src="assets/images/ai.svg" alt="">
           </a>
@@ -30,36 +24,42 @@
           <h2>Превратите одно фото —
             <span class="yellow">в целую коллекцию образов</span></h2>
 
-          <div class="collection common-slider">
+          <div class="swiper js-swiper collection common-slider">
             <div class="swiper-wrapper">
 
               <section class="before-after-section swiper-slide">
+                <img src="assets/images/collection1.jpg" alt="">
                 <div class="before-after-badge">До/после</div>
               </section>
 
               <section class="before-after-section swiper-slide">
+                <img src="assets/images/collection1.jpg" alt="">
                 <div class="before-after-badge">До/после</div>
               </section>
 
               <section class="before-after-section swiper-slide">
+                <img src="assets/images/collection1.jpg" alt="">
                 <div class="before-after-badge">До/после</div>
               </section>
 
             </div>
           </div>
 
-          <section class="before-after-section">
-            <div class="before-after-badge">До/после</div>
-          </section>
+          <p style="margin-top: 0;">
+            Не нужно навыков или регистрации — всё делается автоматически.
+          </p>
 
-          <a href="#" class="btn">Пример кнопки</a>
+          <a href="register.html" class="btn">
+            НАЧНИ СЕЙЧАС
+            <img src="assets/images/ai.svg" alt="">
+          </a>
 
           <h2>
             ИИ-студия<br>
             <span class="yellow">нового поколения</span>
           </h2>
 
-          <div class="common-slider">
+          <div class="swiper js-swiper common-slider">
             <div class="cards swiper-wrapper">
               <!-- Чёрная карточка -->
               <div class="card black swiper-slide">
@@ -75,112 +75,156 @@
             </div>
           </div>
 
-          <div class="upload-box">
-            <p>Загрузите фото (JPG, PNG до 10MB)</p>
-            <a href="#" class="btn">ЗАГРУЗИ ФОТОГРАФИЮ</a>
+          <section class="before-after-section">
+            <div class="before-after-badge">До/после</div>
+          </section>
+
+          <h2>
+            Как получить результат <br>
+            <span class="yellow">за секунды</span>
+          </h2>
+
+          <div class="upload-wrap">
+            <div class="upload-box">
+              <a href="register.html" class="upload-btn"><img src="assets/images/upload.svg" alt="Upload"></a>
+              <p>
+                <span class="yellow">Нажмите</span>, чтобы загрузить фотографию PNG, JPG (максимальный размер
+                допускаемого файла 10 МБ)
+              </p>
+              <a href="register.html" class="btn">ЗАГРУЗИ ФОТОГРАФИЮ</a>
+            </div>
+
+            <div class="text"><p>Загрузите фото</p>
+              <p class="description">
+                Выберите чёткое селфи или портрет, где хорошо видно лицо. Подойдёт обычное фото — профессиональная
+                съёмка не нужна.
+              </p></div>
           </div>
 
-          <div class="common-slider">
+          <div class="upload-wrap style-box">
+            <div class="head-wrap">
+              <div class="small">Выберите стиль изображения</div>
+              <div class="styles">
+                <div class="style">
+                  <img src="assets/images/style-box.png" alt=""></div>
+                </div>
+              </div>
+
+            <div class="text">
+              <p>Выберите стиль</p>
+              <p class="description">
+                Выберите один из множества стилей генерации — от реалистичных до художественных.
+                Подберите образ под своё настроение или цели.
+              </p></div>
+          </div>
+
+          <div class="upload-wrap style-box">
+            <div class="head-wrap">
+              <img src="assets/images/wedding.png" alt=""></div>
+
+            <div class="text">
+              <p>Скачайте готовое фото</p>
+              <p class="description">
+                Уже через несколько секунд вы получите готовый аватар в высоком качестве — для соцсетей, мессенджеров или деловых платформ.
+              </p></div>
+          </div>
+
+          <a href="register.html" class="btn">
+            СОЗДАЙ ФОТО
+            <img src="assets/images/ai.svg" alt="">
+          </a>
+
+          <h2>
+            Результаты, которые
+            <span class="yellow">говорят сами за себя</span>
+          </h2>
+
+          <div class="results"></div>
+          <div class="results-box">
+            <div class="results-item one">
+                <div class="before-after-badge">Мода</div>
+            </div>
+            <div class="results-item two">
+              <div class="before-after-badge">Природа</div>
+            </div>
+            <div class="results-item three">
+              <div class="before-after-badge">Русский стиль</div>
+            </div>
+          </div>
+
+          <div class="results-text"><p>Для достижения наилучших результатов, убедитесь, что лицо на загружаемых
+            фотографиях хорошо видно. </p>
+            <p>Избегайте загрузки фотографий без лица, так как это приведет к ошибке.</p>
+          </div>
+
+          <a href="register.html" class="btn">
+            ПОПРОБУЙ БЕСПЛАТНО
+            <img src="assets/images/ai.svg" alt="">
+          </a>
+
+          <h2>
+            Что о нас <span class="yellow">говорят</span>
+          </h2>
+
+          <div class="swiper js-swiper common-slider reviews-slider">
             <div class="swiper-wrapper">
               <div class="slide review swiper-slide">
                 <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"Мгновенный результат! Очень доволен."</p>
+                <p>Мгновенный результат</p>
+                <p class="small">
+                  Магия в один клик! Моя селфи превратилась в кинопортрет — просто вау!
+                </p>
                 <div class="review__author">
                   <div class="review__avatar">
-                    <img src="assets/images/avatar-placeholder.jpg" alt="Артур">
+                    <img src="assets/images/man.jpg" alt="">
                   </div>
                   <div class="review__info">
-                    <div class="review__name">Артур</div>
-                    <div class="review__position">Frontend разработчик</div>
+                    <div class="review__name">Артур Сикоза <span class="icon"></span></div>
+                    <div class="review__position">Мобильный фотограф</div>
                   </div>
                 </div>
               </div>
-
               <div class="slide review swiper-slide">
                 <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"Отличное качество и быстрая работа. Рекомендую всем!"</p>
+                <p>Мгновенный результат</p>
+                <p class="small">
+                  Магия в один клик! Моя селфи превратилась в кинопортрет — просто вау!
+                </p>
                 <div class="review__author">
                   <div class="review__avatar">
-                    <img src="assets/images/avatar-placeholder.jpg" alt="Мария">
+                    <img src="assets/images/man.jpg" alt="">
                   </div>
                   <div class="review__info">
-                    <div class="review__name">Мария</div>
-                    <div class="review__position">UX/UI Designer</div>
+                    <div class="review__name">Артур Сикоза <span class="icon"></span></div>
+                    <div class="review__position">Мобильный фотограф</div>
                   </div>
                 </div>
               </div>
-
               <div class="slide review swiper-slide">
                 <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"Превзошло все мои ожидания. Профессиональный подход!"</p>
+                <p>Мгновенный результат</p>
+                <p class="small">
+                  Магия в один клик! Моя селфи превратилась в кинопортрет — просто вау!
+                </p>
                 <div class="review__author">
                   <div class="review__avatar">
-                    <img src="assets/images/avatar-placeholder.jpg" alt="Дмитрий">
+                    <img src="assets/images/man.jpg" alt="">
                   </div>
                   <div class="review__info">
-                    <div class="review__name">Дмитрий</div>
-                    <div class="review__position">Product Manager</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slide review swiper-slide">
-                <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"Простое решение сложных задач. Именно то, что нужно!"</p>
-                <div class="review__author">
-                  <div class="review__avatar">
-                    <img src="assets/images/avatar-placeholder.jpg" alt="Елена">
-                  </div>
-                  <div class="review__info">
-                    <div class="review__name">Елена</div>
-                    <div class="review__position">Marketing Director</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slide review swiper-slide">
-                <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"Идеальное соотношение цены и качества. Буду заказывать ещё!"</p>
-                <div class="review__author">
-                  <div class="review__avatar">
-                    <img src="assets/images/avatar-placeholder.jpg" alt="Александр">
-                  </div>
-                  <div class="review__info">
-                    <div class="review__name">Александр</div>
-                    <div class="review__position">CEO</div>
+                    <div class="review__name">Артур Сикоза <span class="icon"></span></div>
+                    <div class="review__position">Мобильный фотограф</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <a href="register.html" class="btn">
+            СОЗДАЙ ИЗОБРАЖЕНИЕ
+            <img src="assets/images/ai.svg" alt="">
+          </a>
         </div>
       </section>
-
-      <div class="tmp-reg-bg">
-        <section class="register">
-          <div class="container">
-            <div class="header">
-              <h1>Введите номер телефона</h1>
-            </div>
-
-            <div class="form-container">
-              <div class="phone-input">
-                <div class="phone-field">
-                  <div class="country-code">+7</div>
-                  <input type="tel" placeholder="(9XX) XXX-XX-XX" pattern="[0-9]{10}" maxlength="10" required>
-                </div>
-              </div>
-
-              <button class="btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
-
-              <div class="agreement">
-                <input type="checkbox" id="agree" required>
-                <label for="agree">Соглашаюсь с <a href="#">правилами лицензионного договора оферты</a> и <a href="#">правилами использования РФ</a>. <a href="#">Политика обработки персональных данных</a> мне понятна и я с ней согласен. Согласен на автоматическую оплату в размере <span class="highlight">одной тысячи пятисот рублей</span> каждые пять дней по истечению пробного периода в один день.</label>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
     </main>
 
     @@include('../partials/footer.html')

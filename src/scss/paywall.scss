@@ -120,3 +120,55 @@ main.paywall-main {
 
   }
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-wrap.error-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 450px;
+  z-index: 40;
+  background-color: rgba(41, 41, 41, 1);
+  padding: 5px;
+  border-radius: 8px;
+
+  .upload-box {
+    padding: 52px 24px 20px 24px;
+    position: relative;
+    background-color: rgba(41, 41, 41, 1);
+
+    .error-btn {
+      background-color: rgba(228, 47, 47, 1);
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 6px auto;
+    }
+
+    .close {
+      position: absolute;
+      top: 21px;
+      right: 29px;
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+    }
+  }
+}

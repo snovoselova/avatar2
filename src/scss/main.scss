@@ -50,6 +50,10 @@ img {
   padding-inline: var(--space-4);
 }
 
+.hidden {
+  display: none;
+ }
+
 .yellow {
   color: #FFBB33;
 }
@@ -406,15 +410,6 @@ footer {
   .footer-content {
     overflow: hidden;
     transition: all 0.3s ease;
-    opacity: 1;
-    max-height: 1000px; /* достаточно большое значение для содержимого */
-
-    &.hidden {
-      opacity: 0;
-      max-height: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
   }
 
   h3 {

@@ -11,6 +11,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104039961', 'ym');
+
+    ym(104039961, 'init', {ssr:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/104039961" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
 </head>
 
   <body>
@@ -26,6 +41,19 @@
   </div>
 </header>
 
+
+    <div class="overlay hidden">
+      <div class="upload-wrap error-modal">
+        <div class="upload-box">
+          <a href="#" class="close"><img src="assets/images/close.svg"></a>
+          <span class="error-btn"><img src="assets/images/exclam.svg"></span>
+          <p>
+            Сервис временно недоступен
+          </p>
+          <a href="register.html" class="btn">ПОПРОБОВАТЬ ЕЩЕ РАЗ</a>
+        </div>
+      </div>
+    </div>
 
     <main class="main container paywall-main">
       <section class="section">
@@ -71,29 +99,45 @@
 
     <footer>
   <div class="container">
-    <a href="/" class="logo">PicneticAi</a>
-    <div class="box"><p>ООО «ЗДОРОВЬЕ ОНЛАЙН»</p>
-      <p>ИНН 7841097681</p>
-      <p>1940044, Россия, г. Санкт-Петербург, ул. Рылеева, д. 3, литера А, пом. 7Н, офис 8</p></div>
-
-    <div class="box"><h3>Юридическая информация</h3>
-      <a href="https://aiavatar.ru/files/rules.pdf">Правила пользования ПК</a>
-      <a href="https://aiavatar.ru/files/oferta.pdf">Лицензионный договор</a>
-      <a href="https://aiavatar.ru/files/policy.pdf">Политика конфиденциальности</a>
-      <a href="#">Отписаться</a></div>
-
-    <div class="box">
-      <h3>Свяжитесь с нами</h3>
-      <a href="#" class="mail">
-        <span class="icon"></span>
-        support@aiavatar.ru
-      </a>
-      <a href="https://mycpa.ru/">Партнерская программа</a>
+    <div class="footer-top">
+      <a href="#" class="logo">PicneticAi</a>
+      
+      <button class="footer-toggle" aria-expanded="false" aria-label="Показать дополнительную информацию">
+        <svg class="toggle-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      
     </div>
 
+    
+    <div class="footer-content hidden">
+      
+      <div class="box">
+        <p>ООО «ЗДОРОВЬЕ ОНЛАЙН»</p>
+        <p>ИНН 7841097681</p>
+        <p>1940044, Россия, г. Санкт-Петербург, ул. Рылеева, д. 3, литера А, пом. 7Н, офис 8</p>
+      </div>
+
+      <div class="box">
+        <h3>Юридическая информация</h3>
+        <a href="https://aiavatar.ru/files/rules.pdf">Правила пользования ПК</a>
+        <a href="https://aiavatar.ru/files/oferta.pdf">Лицензионный договор</a>
+        <a href="https://aiavatar.ru/files/policy.pdf">Политика конфиденциальности</a>
+        <a href="#">Отписаться</a>
+      </div>
+
+      <div class="box">
+        <h3>Свяжитесь с нами</h3>
+        <a href="#" class="mail">
+          <span class="icon"></span>
+          support@aiavatar.ru
+        </a>
+        <a href="https://mycpa.ru/">Партнерская программа</a>
+      </div>
+    </div>
   </div>
 </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>

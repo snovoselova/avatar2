@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Swiper('.common-slider', {
         loop: false,
         spaceBetween: 24,
+        slidesPerView: "auto"
     });
 
     // Phone input mask for registration form

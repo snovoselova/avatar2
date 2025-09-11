@@ -54,6 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
+        // Add registration goal tracking
+        registerBtn.addEventListener('click', function() {
+            if (typeof ym !== 'undefined') {
+                ym(104039961, 'reachGoal', 'registration');
+            }
+        });
+        
         // Initial validation
         validateForm();
     }
@@ -66,6 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (payButton && overlay) {
         payButton.addEventListener('click', function(e) {
             e.preventDefault();
+            // Track payment button click goal
+            if (typeof ym !== 'undefined') {
+                ym(104039961, 'reachGoal', 'button_pay');
+            }
             overlay.classList.remove('hidden');
         });
     }

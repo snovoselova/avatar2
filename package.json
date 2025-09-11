@@ -34,5 +34,8 @@
     "through2": "^4.0.2",
     "webpack": "^5.94.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "inputmask": "^5.0.9"
   }
 }

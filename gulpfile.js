@@ -92,7 +92,9 @@ function html() {
                 context: {
                     landing: l.id,
                     headerImage: `assets/images/headers/${l.header}`,
-                    titleSuffix: l.titleSuffix || ''
+                    titleSuffix: l.titleSuffix || '',
+                    h1: l.h1,
+                    collectionPhoto: l.collectionPhoto,
                 }
             }))
             .pipe(dest(`${paths.dist}/${l.id}`));

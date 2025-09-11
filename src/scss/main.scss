@@ -1,4 +1,5 @@
 @import 'register';
+@import 'paywall';
 
 /* Mobile-first styles */
 :root {
@@ -62,10 +63,35 @@ img {
 }
 
 .site-header {
-  position: absolute;
-  top: 0;
   width: 100%;
   z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .img-wrap {
+    min-height: 525px;
+    overflow: hidden;
+    position: absolute;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+
+    img.header-bg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   .site-header__inner {
     display: flex;
@@ -293,13 +319,13 @@ h2 {
 
 .first-screen-section {
   position: relative;
-  background-image: url('../images/tmp.png');
   background-size: cover;
   background-position: center;
   min-height: 525px;
   margin-bottom: var(--space-3);
   display: flex;
   align-items: flex-end;
+  z-index: 10;
 
   h1 {
     font-size: 32px;
@@ -536,11 +562,11 @@ footer {
   .text {
     border-top: 1px solid rgba(109, 104, 104, 0.27);
     padding: 0 16px 16px 16px;
+  }
 
-    .description {
-      font-size: 16px;
-      font-weight: 300;
-    }
+  .description {
+    font-size: 16px;
+    font-weight: 300;
   }
 }
 
@@ -638,6 +664,21 @@ footer {
   }
 }
 
+.light-box {
+  margin-top: 24px;
+
+  .head-wrap {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+
+    img {
+      width: 65px;
+      height: 123px;
+      margin-bottom: -15px;
+    }
+  }
+}
 
 /* Responsive для слайдера отзывов */
 @media (min-width: 768px) {

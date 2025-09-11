@@ -4,33 +4,46 @@
   <body>
     @@include('../partials/header.html')
 
-    <main class="main">
+    <main class="main container paywall-main">
       <section class="section">
         <div class="container">
-          <h1>Оплата</h1>
-          <p>Доступ к материалам откроется сразу после оплаты.</p>
-          <div class="paywall">
-            <div class="paywall__plan">
-              <h2>Старт</h2>
-              <p class="paywall__price">490 ₽</p>
-              <ul class="paywall__features">
-                <li>1 месяц доступа</li>
-                <li>Базовые материалы</li>
-              </ul>
-              <button class="btn">Оплатить</button>
-            </div>
-            <div class="paywall__plan paywall__plan--best">
-              <h2>Про</h2>
-              <p class="paywall__price">1290 ₽</p>
-              <ul class="paywall__features">
-                <li>3 месяца доступа</li>
-                <li>Все материалы + поддержка</li>
-              </ul>
-              <button class="btn">Оплатить</button>
-            </div>
+          <div class="markers">
+            <div class="crown"><div class="icon"></div></div>
+            <div class="marker"><div class="icon"></div>Полный доступ к коллекциям</div>
+            <div class="marker"><div class="icon"></div>Мгновенная обработка
+              без рекламы</div>
+            <div class="marker"><div class="icon"></div>HD качество фотографий</div>
           </div>
         </div>
+
+        <div class="price-box">
+          <div class="old-price">
+            <span class="label">Прежняя цена:</span>
+            <span class="value">290₽</span>
+          </div>
+          <div class="new-price">
+            <span class="label">Новая цена:</span>
+            <span class="value">20₽</span>
+          </div>
+          <div class="discount">-93%</div>
+        </div>
+
+        <a href="paywall.html" class="btn pay">
+          ОПЛАТИТЬ
+        </a>
+
       </section>
+
+      <div class="upload-wrap style-box light-box">
+        <div class="head-wrap">
+          <div><h2>ИИ вместо фотостудии</h2>
+            <p class="description">
+              Не тратьтесь на студии
+              и камеры — сделайте полноценную фотосессию с помощью ИИ.
+            </p></div>
+          <img src="assets/images/light.png" alt="">
+        </div>
+      </div>
     </main>
 
     @@include('../partials/footer.html')

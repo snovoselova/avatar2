@@ -4,34 +4,39 @@
   <body>
     @@include('../partials/header.html')
 
-    <main class="main">
+    <main class="main main-inner register">
+      <div class="container">
+        <div class="header">
+          <h1>Введите номер телефона</h1>
+        </div>
 
-
-      <div class="tmp-reg-bg">
-        <section class="register">
-          <div class="container">
-            <div class="header">
-              <h1>Введите номер телефона</h1>
-            </div>
-
-            <div class="form-container">
-              <div class="phone-input">
-                <div class="phone-field">
-                  <div class="country-code">+7</div>
-                  <input type="tel" placeholder="(9XX) XXX-XX-XX" pattern="[0-9]{10}" maxlength="10" required>
-                </div>
-              </div>
-
-              <a href="register.html" class="btn">ЗАРЕГИСТРИРОВАТЬСЯ
-                <img src="assets/images/ai.svg" alt=""></a>
-
-              <div class="agreement">
-                <input type="checkbox" id="agree" required>
-                <label for="agree">Соглашаюсь с <a href="#">правилами лицензионного договора оферты</a> и <a href="#">правилами использования РФ</a>. <a href="#">Политика обработки персональных данных</a> мне понятна и я с ней согласен. Согласен на автоматическую оплату в размере <span class="highlight">одной тысячи пятисот рублей</span> каждые пять дней по истечению пробного периода в один день.</label>
-              </div>
+        <div class="form-container">
+          <div class="phone-input">
+            <div class="phone-field">
+              <div class="country-code">+7</div>
+              <input type="tel" placeholder="(9XX) XXX-XX-XX" pattern="[0-9]{10}" maxlength="10" required>
             </div>
           </div>
-        </section>
+
+          <a href="paywall.html" class="btn">ЗАРЕГИСТРИРОВАТЬСЯ
+            <img src="assets/images/ai.svg" alt=""></a>
+
+          <div class="agreement">
+            <input type="checkbox" id="agree" required>
+            <label for="agree">Соглашаюсь с <a href="#">правилами лицензионного договора оферты</a> и <a href="#">правилами использования РФ</a>. <a href="#">Политика обработки персональных данных</a> мне понятна и я с ней согласен. Согласен на автоматическую оплату в размере <span class="highlight">одной тысячи пятисот рублей</span> каждые пять дней по истечению пробного периода в один день.</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="upload-wrap style-box light-box">
+        <div class="head-wrap">
+          <div><h2>ИИ вместо фотостудии</h2>
+            <p class="description">
+              Не тратьтесь на студии
+              и камеры — сделайте полноценную фотосессию с помощью ИИ.
+            </p></div>
+          <img src="assets/images/light.png" alt="">
+        </div>
       </div>
     </main>
 

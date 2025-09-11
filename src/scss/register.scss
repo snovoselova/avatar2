@@ -1,10 +1,11 @@
-// TODO remove
-.tmp-reg-bg {
-  background: url('../images/tmp.png') no-repeat center center fixed;
-  background-size: cover;
+.main-inner {
+  z-index: 10;
+  position: relative;
 }
 
-section.register {
+main.register {
+  margin: 365px 24px 24px 24px;
+
   .container {
     width: 100%;
     max-width: 450px;
@@ -27,7 +28,7 @@ section.register {
   }
 
   .form-container {
-    padding: 30px;
+    padding: 0 30px 30px 30px;
 
     .btn {
       width: 100%;

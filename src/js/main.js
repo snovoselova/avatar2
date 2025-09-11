@@ -45,6 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
         validateForm();
     }
 
+    // Paywall modal functionality
+    const payButton = document.querySelector('.btn.pay');
+    const overlay = document.querySelector('.overlay');
+    const closeButton = document.querySelector('.overlay .close');
+
+    if (payButton && overlay) {
+        payButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            overlay.classList.remove('hidden');
+        });
+    }
+
+    if (closeButton && overlay) {
+        closeButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            overlay.classList.add('hidden');
+        });
+    }
+
     // Toggle для футера
     const footerToggle = document.querySelector('.footer-toggle');
     const footerLink = document.querySelector('.footer-top .logo');

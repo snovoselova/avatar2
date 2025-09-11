@@ -41,6 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
         phoneInput.addEventListener('input', validateForm);
         agreeCheckbox.addEventListener('change', validateForm);
         
+        // Add Enter key listener for phone input
+        phoneInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const phoneValue = phoneInput.value.replace(/\D/g, ''); // Remove non-digits
+                const isPhoneValid = phoneValue.length === 10;
+                const isAgreed = agreeCheckbox.checked;
+                
+                if (isPhoneValid && isAgreed) {
+                    registerBtn.click();
+                }
+            }
+        });
+        
         // Initial validation
         validateForm();
     }

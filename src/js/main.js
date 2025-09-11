@@ -14,6 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
         phoneMask.mask(phoneInput);
     }
 
+    // Registration form validation
+    const registerBtn = document.querySelector('.btn[href="paywall.html"]');
+    const agreeCheckbox = document.querySelector('#agree');
+    
+    if (registerBtn && phoneInput && agreeCheckbox) {
+        // Initially disable the registration button
+        registerBtn.style.pointerEvents = 'none';
+        registerBtn.style.opacity = '0.5';
+        
+        function validateForm() {
+            const phoneValue = phoneInput.value.replace(/\D/g, ''); // Remove non-digits
+            const isPhoneValid = phoneValue.length === 10; // 10 digits for Russian phone
+            const isAgreed = agreeCheckbox.checked;
+            
+            if (isPhoneValid && isAgreed) {
+                registerBtn.style.pointerEvents = 'auto';
+                registerBtn.style.opacity = '1';
+            } else {
+                registerBtn.style.pointerEvents = 'none';
+                registerBtn.style.opacity = '0.5';
+            }
+        }
+        
+        // Add event listeners
+        phoneInput.addEventListener('input', validateForm);
+        agreeCheckbox.addEventListener('change', validateForm);
+        
+        // Initial validation
+        validateForm();
+    }
+
     // Toggle для футера
     const footerToggle = document.querySelector('.footer-toggle');
     const footerLink = document.querySelector('.footer-top .logo');

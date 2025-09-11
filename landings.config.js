@@ -25,6 +25,6 @@ module.exports = [
         header: 'header4.jpg',
         titleSuffix: 'D',
         h1: 'ОСТАВЬ В КАДРЕ ТОЛЬКО ГЛАВНОЕ',
-        collectionPhoto: 'collection-diff-4.jpg'
+        collectionPhoto: 'collection-diff-4.png'
     }
 ];

@@ -196,10 +196,10 @@ main.paywall-main .section .price-box .new-price .label {
 }
 main.paywall-main .section .price-box .old-price .value,
 main.paywall-main .section .price-box .new-price .value {
+  font-family: "Montserrat", sans-serif;
   display: block;
   font-size: 35px;
   font-weight: bold;
-  font-family: "Arial", sans-serif;
 }
 main.paywall-main .section .price-box .old-price {
   border-right: 1px solid #eee;

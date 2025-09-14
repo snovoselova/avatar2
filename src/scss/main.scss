@@ -199,6 +199,13 @@ h2 {
   padding-left: 1rem;
 }
 
+.collection-video {
+  width: 261px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 /* Slider */
 .slider {
   padding: var(--space-6) 0;
@@ -344,6 +351,7 @@ h2 {
 .collection {
   .swiper-slide {
     max-width: 261px;
+    max-height: 300px;
   }
 }
 
@@ -355,9 +363,12 @@ h2 {
   margin-top: var(--space-5);
   margin-bottom: var(--space-5);
   overflow: hidden;
-  background-image: url('../images/before-after.png');
   background-size: cover;
   background-position: center;
+
+  &.result-photo-box {
+    background-image: url('../images/before-after.png');
+  }
 }
 
 .before-after-badge {

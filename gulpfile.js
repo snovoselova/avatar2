@@ -20,7 +20,8 @@ const paths = {
         images: 'src/images/**/*',
         js: 'src/js/**/*.js',
         scss: 'src/scss/**/*.scss',
-        fonts: 'src/fonts/**/*'
+        fonts: 'src/fonts/**/*',
+        videos: 'src/videos/**/*'
     }
 };
 
@@ -75,6 +76,15 @@ function images() {
     return merge(streams);
 }
 
+function videos() {
+    const streams = landings.map(l => {
+        return src(paths.assets.videos, { allowEmpty: true })
+            .pipe(gulpIf(isProd, imagemin()))
+            .pipe(dest(`${paths.dist}/${l.id}/assets/videos`));
+    });
+    return merge(streams);
+}
+
 function fonts() {
     const streams = landings.map(l => {
         return src(paths.assets.fonts, { allowEmpty: true })
@@ -94,7 +104,7 @@ function html() {
                     headerImage: `assets/images/headers/${l.header}`,
                     titleSuffix: l.titleSuffix || '',
                     h1: l.h1,
-                    collectionPhoto: l.collectionPhoto,
+                    collectionPhoto: `${l.collectionPhoto}`,
                 }
             }))
             .pipe(dest(`${paths.dist}/${l.id}`));
@@ -115,15 +125,17 @@ function serve() {
     watch(paths.assets.scss, styles);
     watch(paths.assets.js, scripts);
     watch(paths.assets.images, images);
+    watch(paths.assets.videos, videos);
     watch(['src/pages/**/*.html', 'src/templates/**/*.html', 'src/partials/**/*.html'], html);
 }
 
-const build = series(clean, parallel(styles, scripts, images, fonts, html));
+const build = series(clean, parallel(styles, scripts, images, videos, fonts, html));
 
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
+exports.videos = videos;
 exports.fonts = fonts;
 exports.html = html;
 exports.build = build;

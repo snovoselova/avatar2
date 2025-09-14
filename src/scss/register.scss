@@ -102,20 +102,6 @@ main.register {
     padding-left: 32px;
   }
 
-  .register-btn {
-    width: 100%;
-    padding: 16px;
-    background: #4c7df5;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-bottom: 20px;
-  }
-
   .agreement {
     display: flex;
     align-items: flex-start;
@@ -123,11 +109,47 @@ main.register {
     color: #D6D6D6;
     line-height: 1.5;
     margin-top: 20px;
-  }
 
-  .agreement input {
-    margin-top: 3px;
-    margin-right: 10px;
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked + label::after {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 7px;
+        width: 11px;
+        height: 9px;
+        background-image: url('../images/checkbox.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        border-radius: 3px;
+      }
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+      padding-left: 28px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 14px;
+        height: 14px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+    }
   }
 
   .agreement a {

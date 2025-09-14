@@ -579,7 +579,7 @@ footer {
     background: #1a1a1a;
     border: 2px dashed #f0a500;
     border-radius: 12px;
-    padding: 20px;
+    padding: 36px 21px;
     text-align: center;
     margin: 16px 16px 20px 16px;
     font-size: 14px;
@@ -597,7 +597,7 @@ footer {
     }
 
     .btn {
-      margin: 24px 0 16px 0;
+      margin: 24px 0 0 0;
     }
   }
 
@@ -646,6 +646,11 @@ footer {
     font-family: 'Moderustic', sans-serif;
     font-size: 16px;
     line-height: 1.4;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
 
     &.black {
       background: #1a1a1a;

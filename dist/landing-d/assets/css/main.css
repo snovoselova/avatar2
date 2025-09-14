@@ -5,7 +5,16 @@
 }
 
 main.register {
-  margin: 365px 24px 24px 24px;
+  margin: 365px 24px 4px 24px;
+}
+main.register h1 {
+  margin: 0;
+}
+main.register .photo-studio h2 {
+  margin-top: 0;
+}
+main.register .photo-studio p:last-child {
+  margin-bottom: 0;
 }
 main.register .container {
   width: 100%;
@@ -15,6 +24,7 @@ main.register .container {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  padding-inline: 0;
 }
 main.register .header {
   padding: 25px 30px;
@@ -31,8 +41,11 @@ main.register .form-container {
 main.register .form-container .btn {
   width: 100%;
 }
+main.register .upload-wrap {
+  margin-bottom: 0;
+}
 main.register .phone-input {
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 }
 main.register .phone-input label {
   display: block;
@@ -74,32 +87,50 @@ main.register .phone-field input::placeholder {
 main.register .phone-field img {
   padding-left: 32px;
 }
-main.register .register-btn {
-  width: 100%;
-  padding: 16px;
-  background: #4c7df5;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-bottom: 20px;
-}
 main.register .agreement {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 15px;
-  font-size: 13px;
+  font-size: 8px;
   color: #D6D6D6;
   line-height: 1.5;
-  margin-bottom: 10px;
   margin-top: 20px;
 }
-main.register .agreement input {
-  margin-top: 3px;
-  margin-right: 10px;
+main.register .agreement input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+main.register .agreement input[type=checkbox]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  width: 11px;
+  height: 9px;
+  background-image: url("../images/checkbox.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border-radius: 3px;
+}
+main.register .agreement label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 28px;
+}
+main.register .agreement label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
 }
 main.register .agreement a {
   color: #D6D6D6;
@@ -110,7 +141,10 @@ main.register .agreement a {
     border-radius: 12px;
   }
   main.register .form-container {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
+  }
+  main.register .form-container .btn {
+    margin-bottom: 20px;
   }
   main.register .header {
     padding: 20px;
@@ -469,6 +503,14 @@ h2 {
   padding-left: 1rem;
 }
 
+.collection-video {
+  width: 261px;
+  height: 300px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 /* Slider */
 .slider {
   padding: var(--space-6) 0;
@@ -605,6 +647,7 @@ h2 {
 
 .collection .swiper-slide {
   max-width: 261px;
+  max-height: 300px;
 }
 
 /* Before/After Section */
@@ -615,9 +658,11 @@ h2 {
   margin-top: var(--space-5);
   margin-bottom: var(--space-5);
   overflow: hidden;
-  background-image: url("../images/before-after.png");
   background-size: cover;
   background-position: center;
+}
+.before-after-section.result-photo-box {
+  background-image: url("../images/before-after.png");
 }
 
 .before-after-badge {
@@ -637,6 +682,10 @@ footer {
   color: rgb(165, 165, 165);
   font-size: 12px;
   padding-bottom: var(--space-5);
+}
+footer .container {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 footer .footer-top {
   display: flex;
@@ -818,7 +867,7 @@ footer a.mail .icon {
   background: #1a1a1a;
   border: 2px dashed #f0a500;
   border-radius: 12px;
-  padding: 20px;
+  padding: 36px 21px;
   text-align: center;
   margin: 16px 16px 20px 16px;
   font-size: 14px;
@@ -835,7 +884,7 @@ footer a.mail .icon {
   margin: 0 auto 6px auto;
 }
 .upload-wrap .upload-box .btn {
-  margin: 24px 0 16px 0;
+  margin: 24px 0 0 0;
 }
 .upload-wrap .text {
   border-top: 1px solid rgba(109, 104, 104, 0.27);
@@ -878,6 +927,10 @@ footer a.mail .icon {
   font-family: "Moderustic", sans-serif;
   font-size: 16px;
   line-height: 1.4;
+}
+.cards .card img {
+  width: 18px;
+  height: 18px;
 }
 .cards .card.black {
   background: #1a1a1a;

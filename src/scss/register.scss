@@ -4,7 +4,22 @@
 }
 
 main.register {
-  margin: 365px 24px 24px 24px;
+  margin: 365px 24px 4px 24px;
+
+  h1 {
+    margin: 0;
+  }
+
+  .photo-studio {
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   .container {
     width: 100%;
@@ -14,6 +29,7 @@ main.register {
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    padding-inline: 0;
   }
 
   .header {
@@ -35,8 +51,12 @@ main.register {
     }
   }
 
+  .upload-wrap {
+    margin-bottom: 0;
+  }
+
   .phone-input {
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
 
   .phone-input label {
@@ -99,11 +119,9 @@ main.register {
   .agreement {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 15px;
-    font-size: 13px;
+    font-size: 8px;
     color: #D6D6D6;
     line-height: 1.5;
-    margin-bottom: 10px;
     margin-top: 20px;
   }
 
@@ -123,7 +141,11 @@ main.register {
     }
 
     .form-container {
-      padding: 20px;
+      padding: 0 20px 20px 20px;
+
+      .btn {
+        margin-bottom: 20px;
+      }
     }
 
     .header {

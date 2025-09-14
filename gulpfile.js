@@ -105,6 +105,7 @@ function html() {
                     titleSuffix: l.titleSuffix || '',
                     h1: l.h1,
                     collectionPhoto: `${l.collectionPhoto}`,
+                    collectionDescriptor: l.collectionDescriptor,
                 }
             }))
             .pipe(dest(`${paths.dist}/${l.id}`));

@@ -389,6 +389,11 @@ footer {
   font-size: 12px;
   padding-bottom: var(--space-5);
 
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .footer-top {
     display: flex;
     gap: 10px;
